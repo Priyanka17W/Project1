@@ -1,0 +1,36 @@
+ 
+<h2>Employees of Organization</h2>
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Dept</th>
+        </tr>
+<tr *ngFor="let e of local_emp_database"(click="onRou(e.eid")>
+   <td> {{e.ename}}</td>
+   <td>{{e.email}}</td>
+   <td>{{e.dept}}</td>
+   </tr>
+   </table>
+   <h2>Employee of Organization from mongoDB Database</h2>
+   <br><br>
+   <button class="btn btn-warning btn11"(click)="onAddEmpRou()">ADD Employee to Mongodb Database</button>
+   <br><br>
+   <div>
+       <table class="table table-hover">
+           <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Dep</th>
+               
+           </tr>
+           <tr *ngFor="let e of local_emp_database"(click="onRou(e.eid")>
+            <td>{{e.emp_id}}</td>
+            <td>{{e.emp_name}}</td>
+            <td>{{e.emp_dep}}</td>
+            <td><button (click)="onEdit(e._id)">EDIT</button></td>
+            <td><button (click)="onDel(e._id)">DELETE</button></td>
+           </tr>
+       </table>
+   </div>
+    

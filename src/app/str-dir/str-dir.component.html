@@ -1,0 +1,78 @@
+<p>str-dir works!</p>
+<h1>{{stu_name}}</h1>
+<h2 *ngFor="let st of students">
+{{st}}
+</h2>
+
+    <h3>Student Entry</h3>
+    <label>Name</label>
+    <input type="text"[(ngModel)]="stname">
+    <label>Maths</label>
+    <input type="text"[(ngModel)]="mt">
+    <label>English</label>
+    <input type="text"[(ngModel)]="eng">
+    <label>Science</label>
+    <input type="text"[(ngModel)]="sci">
+    <label>Bio</label>
+    <input type="text"[(ngModel)]="bio">
+ 
+    <button (click)="onAddStudent()">Add Student</button>
+    <div class="row">
+         <div class="col pass">
+            <table class="table table-danger table-hover">
+             
+                 <thead>
+                     <tr>
+                         <th scope="col">name</th>
+                         <th scope="col">maths</th>
+                         <th scope="col">eng</th>
+                         <th scope="col">sci</th>
+                         <th scope="col">bio</th>
+                         <th scope="col">status</th>
+                         </tr>
+                         </thead>
+    <tbody>
+        <tr *ngFor="let st of pass_st">
+            <td>{{st.name}}</td>
+            <td>{{st.maths}}</td>
+            <td>{{st.english}}</td>
+            <td>{{st.science}}</td>
+            <td>{{st.bio}}</td>
+            <td>Pass</td>
+            </tr>
+            </tbody>
+           
+<tbody>
+   <tr *ngFor="let st of fail_st">
+       <td>{{st.name}}</td>
+       <td>{{st.maths}}</td>
+       <td>{{st.english}}</td>
+       <td>{{st.science}}</td>
+       <td>{{st.bio}}</td>
+       <td>Fail</td>
+       </tr>
+       </tbody>
+</table>
+            
+        </div>
+        </div>
+
+  <h2 *ngIf="ngIf_cond">This block is visible</h2>
+  <label for="">Enter your Marks</label>
+  <input type="number"[(ngModel)]="ngIf_marks">
+  <h1 *ngIf="ngIf_marks>=40">Congratulation!!!</h1>
+  <h1 *ngIf="!(ngIf_marks>40)">Better Luck Next Time</h1>      
+<label for="">Enter marks</label>
+<input type="text"[(ngModel)]="data12">
+<h2 *ngIf="data12[0]=='A'">An{{data12}}!!!!</h2>
+<h2 *ngIf="data12[0]=='A'">A{{data12}}!!!!</h2>
+
+<div [ngSwitch]="data12[0]">
+    <h4 *ngSwitchCase="'A'">An {{data12}}!!!!</h4>
+    <h4 *ngSwitchCase="'O'">An {{data12}}!!!!</h4>
+    <h4 *ngSwitchCase="'E'">An {{data12}}!!!!</h4>
+    <h4 *ngSwitchCase="'I'">An {{data12}}!!!!</h4>
+    <h4 *ngSwitchCase="'U'">An {{data12}}!!!!</h4>
+
+
+  

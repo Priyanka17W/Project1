@@ -1,0 +1,50 @@
+<p>signup works!</p>
+<div>
+    <label for="">Enter your name</label>
+    <input type="text" name="uname" #uname>
+    </div>
+    <button (click)="onSignup(uname)">signUP</button>
+
+    <h2> Add 2 number</h2>
+
+    <div>
+        <label for="">Enter first number</label>
+        <input type="text" name="uname" #nm1>
+        </div>
+
+        <div>
+            <label for="">Enter second number</label>
+            <input type="text" name="uname" #nm2>
+            </div>
+            <button (click)="onNumAdd(nm1,nm2)">Addtion</button>
+<h4>Result of Addition</h4>
+    
+<h3> Login</h3>
+
+<div>
+    <label for="">Enter first number</label>
+    <input type="text" name="uname" #un>
+    </div>
+
+    <div>
+        <label for="">Enter second number</label>
+        <input type="text" name="unm" #pwd>
+        </div>
+        <button (click)="onLog(un,pwd)">Login</button>
+        
+        <br>
+        
+        <h4>{{msg}}</h4>
+        <h3> Two way data binding exampl </h3>
+        <label> Enter course name </label>
+        <input type="text" [(ngModel)]="coursename">
+        <h4>{{coursename | titlecase}} </h4>
+        <br><br>
+
+        <h2> Two way data binding</h2>
+        <label>Enter Quality</label>
+        <input type="text"[(ngModel)]="qty">
+        <label>Enter Amount</label>
+        <input type="text"[(ngModel)]="amt">
+        <h4>Final Bill is{{qty*amt | currency:'USD'}}</h4>
+        <br><br>

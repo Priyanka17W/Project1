@@ -1,0 +1,14 @@
+<p>emp1 works!</p>
+ <form #sinupform1="ngForm"(submit)=subfun(sinupform1)>
+
+    <div>
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" ngModel required>
+        </div>
+        <div>
+        <label for="mobile">Mobile number</label>
+        <input type="tel" name="mobile" ngModel required>
+        </div>
+        <button type="submit" class="btn1" [disabled]="!sinupform1.valid">Submit</button>
+        </form>
+    
